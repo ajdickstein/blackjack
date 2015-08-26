@@ -1,5 +1,5 @@
 # Black Jack
 
-Game of Black Jack according to the rules [here](http://lmgtfy.com/?q=black+jack+rules).
+Game of Black Jack according to the rules [here](http://www.pagat.com/banking/blackjack.html).
 
 TODO: finish this description.
