@@ -1,0 +1,11 @@
+{
+    "project_name"      : "BlackJack",
+    "output_dir"  : "bin",
+    "sources_dir" : "src",
+    "resources"   : [],
+    "libs"        : [],
+    "encoding"    : "utf-8",
+
+    "entry_file"        : "Casino.java",
+    "entry_point"       : "Casino"
+}
