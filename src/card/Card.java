@@ -2,18 +2,18 @@ package card;
 
 public class Card {
 	private Suit suit;
-	private int value;
+	private Denomination denomination;
 
-	public Card(Suit suit, int value) {
+	public Card(Suit suit, Denomination denomination) {
 		this.suit = suit;
-		this.value = value;
+		this.denomination = denomination;
 	}
 
 	public Suit getSuit() {
 		return suit;
 	}
 
-	public int getValue() {
-		return value;
+	public Denomination getDenomination() {
+		return denomination;
 	}
 }
