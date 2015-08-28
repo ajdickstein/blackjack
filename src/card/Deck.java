@@ -7,10 +7,12 @@ public class Deck {
 	private Stack<Card> deck;
 	
 	public Deck() {
-		this.deck = createDeck();
+		this.deck = new Stack<>();
+		initializeDeck();
+		shuffle();
 	}
 
-	public Stack<Card> createDeck() {
+	public void initializeDeck() {
 		for (Suit suit : Suit.values()) {
 			for (Denomination denom : Denomination.values()) {
 				Card card = new Card(suit, denom);
@@ -18,14 +20,13 @@ public class Deck {
 			}
 		}
 		shuffle();
-		return deck;
 	}
 
 	public void shuffle() {
 		Collections.shuffle(deck);
 	}
 
-	public void deal() {
-		
+	public Card pop() {
+		return deck.pop();
 	}
 }
