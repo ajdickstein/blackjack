@@ -20,21 +20,28 @@ public class Player {
 	// Returns the best possible hand value
 	public int getBestHandValue() {
 		int handValue = 0;
+		boolean isAce = false;
 		for (Card card : myCards) {
 			Denomination denom = card.getDenomination();
-			switch (denom) {
-				
-
-				case ACE: handValue += 11; break;
-
-				default: handValue += denom.getValue();
+			if (denom == Denomination.ACE) {
+				isAce = true;
 			}
+			handValue += denom.getValue();
 		}
-		return -1;
+		if (handValue < 12 && isAce == true) {
+			handValue += 10;
+		}
+		return handValue;
 	}
 
-	// Returns the lowest possible hand value
+
+	//Returns the lowest possible hand value
 	public int getMinimumHandValue() {
-		return -1;
+		int handValue = 0;
+		for (Card card : myCards) {
+			Denomination denom = card.getDenomination();
+			handValue += denom.getValue();
+		}
+		return handValue;
 	}
 }
